@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fake/Spam Message Detector</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2>Fake/Spam Message Detector</h2>
+        <form method="POST">
+            <textarea name="message" placeholder="Type your message here..." required></textarea>
+            <button type="submit">Detect</button>
+        </form>
+        {% if result %}
+            <div class="result">{{ result }}</div>
+        {% endif %}
+    </div>
+</body>
+</html>
